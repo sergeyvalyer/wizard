@@ -1,0 +1,57 @@
+ext.versions = [
+
+        appCompat         : '1.2.0',
+        ktx               : '1.3.2',
+        constraintLayout  : '2.0.4',
+
+        recyclerView      : '1.1.0',
+
+        jUnit             : '4.12',
+        androidJUnit      : '1.1.0',
+        espresso          : '3.3.0',
+
+        rxJava2           : '2.2.20',
+        rxAndroid2        : '2.1.1',
+        rxKotlin2         : '2.4.0',
+
+        okhttp3           : '4.9.0',
+        retrofit          : '2.9.0',
+
+        lifecycle_version : '2.2.0',
+
+        dagger2           : '2.25.2',
+
+        material          : "1.2.1"
+
+]
+
+ext.libraries = [
+        supportAppCompat         : "androidx.appcompat:appcompat:$versions.appCompat",
+        coreKtx                  : "androidx.core:core-ktx:$versions.ktx",
+        constraintLayout         : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+        jUnit                    : "junit:junit:$versions.jUnit",
+        androidJUnit             : "androidx.test.ext:$versions.androidJUnit",
+        espresso                 : "androidx.test.espresso:espresso-core:$versions.espresso",
+        recyclerView             : "androidx.recyclerview:recyclerview:$versions.recyclerView",
+
+        rxJava                   : "io.reactivex.rxjava2:rxjava:$versions.rxJava2",
+        rxAndroid                : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid2",
+        rxKotlin                 : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlin2",
+
+        okhttp3                  : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
+        okhttp3UrlConnection     : "com.squareup.okhttp3:okhttp-urlconnection:$versions.okhttp3",
+
+        retrofit                 : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitAdapterRxJava    : "com.squareup.retrofit2:adapter-rxjava:$versions.retrofit",
+        retrofitConverterGson    : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+
+        lifecycleExtensions      : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version",
+        lifecycleCompiler        : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version",
+        livedata                 : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle_version",
+
+        dagger2                  : "com.google.dagger:dagger:$versions.dagger2",
+        dagger2Compiler          : "com.google.dagger:dagger-compiler:$versions.dagger2",
+
+        materialDesign           : "com.google.android.material:material:$versions.material"
+]
+

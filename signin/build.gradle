@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':coreui')
+    implementation project(':static')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation libraries.supportAppCompat
+    implementation libraries.coreKtx
+    implementation libraries.constraintLayout
+    testImplementation libraries.jUnit
+    androidTestImplementation libraries.androidJUnit
+    androidTestImplementation libraries.espresso
+
+    implementation libraries.rxJava
+    implementation libraries.rxKotlin
+    implementation libraries.rxAndroid
+
+    implementation libraries.retrofit
+    implementation libraries.retrofitAdapterRxJava
+    implementation libraries.retrofitConverterGson
+
+    implementation libraries.okhttp3
+    implementation libraries.okhttp3UrlConnection
+
+    implementation libraries.dagger2
+    kapt libraries.dagger2Compiler
+}

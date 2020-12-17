@@ -1,2 +1,7 @@
+include ':static'
+include ':signin'
+include ':network'
+include ':coreui'
+include ':core'
 rootProject.name='Wizard'
 include ':app'
